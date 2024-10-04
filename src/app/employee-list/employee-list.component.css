@@ -1,0 +1,10 @@
+::ng-deep .mat-sort-header-container {
+  justify-content: space-between;
+}
+
+::ng-deep .mat-sort-header-arrow {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  /* Disable any transitions */
+}

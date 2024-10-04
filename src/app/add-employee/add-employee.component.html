@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="col-md-6">
+        <form [formGroup]="employeeForm" class="border p-4 shadow">
+            <h2 class="text-center mb-4">Add Employee</h2>
+
+            <mat-form-field class="w-100">
+                <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="w-100">
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="w-100">
+                <mat-select placeholder="Department" formControlName="department">
+                    <mat-option *ngFor="let department of departments" [value]="department">
+                        {{ department}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w-100">
+                <input matInput placeholder="Joining Date" formControlName="joiningDate" type="date">
+            </mat-form-field>
+
+            <div class="text-center mt-3">
+                <button mat-raised-button color="primary" (click)="onSubmit()" style="margin-right: 8px;">Add
+                    Employee</button>
+                <button mat-raised-button color="primary" [routerLink]="['/employees']">Go To List</button>
+            </div>
+        </form>
+    </div>
+</div>
